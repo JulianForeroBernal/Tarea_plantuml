@@ -1,0 +1,40 @@
+@startuml Vehiculo
+package logica {
+    interface Conducir
+    interface Sonido
+    class Bicicleta
+    class Carro
+    class Triciclo
+    class Scaner
+    class Conductor
+    class Main
+    Conducir : conducir()
+    Sonido : sonido()
+    Bicicleta : conducir()
+    Bicicleta : sonido() 
+    Carro : conducir()
+    Carro : sonido() 
+    Triciclo : conducir()
+    Triciclo : sonido() 
+    Scaner : Scanner in
+    Conductor : int edad
+    Conductor : String nombre
+    Conductor : obtNom()
+    Conductor : obtEdad()
+    Main : main()
+}
+Main -- Conductor
+Conducir <|-- Carro
+Conducir <|-- Bicicleta
+Conducir <|-- Triciclo
+Sonido <|-- Carro
+Sonido <|-- Bicicleta
+Sonido <|-- Triciclo
+Triciclo o-- Bicicleta
+Conductor <|-- Scaner
+
+
+
+
+
+@enduml
