@@ -1,0 +1,10 @@
+@startuml secuensias del condigo
+Main -> Conductor : obtNom()
+Main -> Conductor : obtEdad() 
+alt edad < 16 
+    alt opcion == 1 
+        carro -> Conductor
+    else edad > 16 
+        alt opcion 1
+        bicicleta -> Conductor
+@enduml

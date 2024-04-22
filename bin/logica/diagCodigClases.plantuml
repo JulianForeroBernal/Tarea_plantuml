@@ -7,6 +7,7 @@ package logica {
     class Triciclo
     class Scaner
     class Conductor
+    class Vehiculo
     class Main
     Conducir : conducir()
     Sonido : sonido()
@@ -24,17 +25,12 @@ package logica {
     Main : main()
 }
 Main -- Conductor
-Conducir <|-- Carro
-Conducir <|-- Bicicleta
-Conducir <|-- Triciclo
-Sonido <|-- Carro
-Sonido <|-- Bicicleta
-Sonido <|-- Triciclo
-Triciclo o-- Bicicleta
-Conductor <|-- Scaner
-
-
-
-
+Vehiculo ..|> Sonido
+Vehiculo ..|> Conducir
+Bicicleta --|> Vehiculo
+Carro --|> Vehiculo
+Triciclo --|> Vehiculo
+Conductor -- Vehiculo
+Scaner -- Conductor
 
 @enduml

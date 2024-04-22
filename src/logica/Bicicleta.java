@@ -1,6 +1,6 @@
 package logica;
 
-public class Bicicleta implements Conducir, Sonido {
+public class Bicicleta extends Vehiculo {
     public void conducir(){
         System.out.println("pedalenado la bicicleta...");
     }
